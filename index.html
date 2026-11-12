@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090a0f"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon.svg">
+<link rel="stylesheet" href="style.css"><title>NOCTURNE</title>
+</head>
+<body>
+<div class="app">
+<header><div class="brand">NOCTURNE<span>音</span></div><button id="addBtn" class="small">＋ 음악 추가</button></header>
+<main>
+<section class="cover-wrap"><div class="cover" id="cover"><div class="cover-mark">N</div><div class="cover-caption">YOUR NIGHT. YOUR SOUND.</div></div></section>
+<div class="track-info"><div class="eyebrow">NOW PLAYING</div><h1 id="title">재생할 음악을 추가하세요</h1><p id="artist">NOCTURNE LIBRARY</p></div>
+<div class="progress"><span id="elapsed">0:00</span><input id="seek" type="range" min="0" max="1000" value="0"><span id="duration">0:00</span></div>
+<div class="controls"><button id="prev" aria-label="이전 곡">⏮</button><button id="play" class="play" aria-label="재생">▶</button><button id="next" aria-label="다음 곡">⏭</button></div>
+<div class="utility"><button id="shuffle">셔플 꺼짐</button><button id="lyricsBtn">가사</button><button id="youtube">YouTube 열기 ↗</button></div>
+<section id="lyrics" class="lyrics hidden"><div class="eyebrow">LYRICS</div><textarea id="lyricsText" placeholder="이 곡의 가사를 직접 입력하세요."></textarea><button id="saveLyrics">가사 저장</button></section>
+<section class="library"><div class="section-head"><h2>내 라이브러리</h2><span id="count">0 TRACKS</span></div><div id="tracks" class="tracks"><div class="empty">＋ 버튼을 눌러 기기에 있는 음악 파일을 추가하세요.</div></div></section>
+</main>
+<footer>NOCTURNE · PERSONAL MUSIC SPACE</footer>
+</div>
+<input id="fileInput" type="file" accept="audio/*" multiple hidden>
+<audio id="audio" preload="metadata"></audio>
+<script src="app.js"></script>
+</body></html>
